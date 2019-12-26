@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const express = require('express');
+const express = require('express')
 const app = express()
 
 const jwt = require('jsonwebtoken')
@@ -47,8 +47,7 @@ app.delete('/logout', (req, res) => {
 
 
 function generateAcessToken(user){
-    return jwt.sign(user, process.env.CODE, { expiresIn: '40s' });
-
+    return jwt.sign(user, process.env.CODE, { expiresIn: '40s' })
 }
 
 
